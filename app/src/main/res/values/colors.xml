@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_blue">#1E88E5</color>
+    <color name="secondary_blue">#BBDEFB</color>
+    <color name="accent_green">#43A047</color>
+    <color name="text_dark">#212121</color>
+    <!-- Add your existing colors here -->
+
+    <!-- Add the missing 'black' color -->
+    <color name="black">#FF000000</color>
+
+    <!-- It's also good practice to define white if you use it -->
+    <color name="white">#FFFFFFFF</color>
+</resources>

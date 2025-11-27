@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GestionRDV_Medical</string>
+
+    <string name="btn_valider">Confirmer</string>
+    <string name="btn_annuler">Annuler</string>
+
+</resources>
