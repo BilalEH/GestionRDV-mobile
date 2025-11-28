@@ -3,5 +3,8 @@
 
     <string name="btn_valider">Confirmer</string>
     <string name="btn_annuler">Annuler</string>
+    <string name="r_capitulatif_du_rendez_vous">Récapitulatif du rendez-vous</string>
+    <string name="confirmer">Confirmer</string>
+    <string name="prise_de_rendez_vous">Prise de rendez-vous</string>
 
 </resources>

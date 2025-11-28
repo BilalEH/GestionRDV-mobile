@@ -11,4 +11,10 @@
 
     <!-- It's also good practice to define white if you use it -->
     <color name="white">#FFFFFFFF</color>
+    <!-- Couleurs principales de l'app -->
+    <color name="primary_blue_dark">#1976D2</color> <!-- bleu plus foncé -->
+
+    <!-- Fond / texte -->
+    <color name="background_white">#FFFFFF</color>
+    <color name="field_background">#F5F5F5</color>
 </resources>
