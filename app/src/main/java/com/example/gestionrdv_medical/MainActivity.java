@@ -32,9 +32,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Redirection vers la page d'inscription
-//                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
-//                startActivity(intent);
-                Toast.makeText(MainActivity.this, "Bientôt disponible", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -55,9 +54,9 @@ public class MainActivity extends AppCompatActivity {
         // SCÉNARIO 1 : PATIENT
         if (email.equals("patient@test.com") && password.equals("1234")) {
             Toast.makeText(this, "Bienvenue Patient !", Toast.LENGTH_SHORT).show();
-//          Intent intent = new Intent(MainActivity.this, PatientHomeActivity.class);
-//          startActivity(intent);
-//          finish();
+          Intent intent = new Intent(MainActivity.this, PatientHomeActivity.class);
+          startActivity(intent);
+          finish();
         }
 
         // SCÉNARIO 2 : MÉDECIN

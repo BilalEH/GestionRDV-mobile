@@ -6,5 +6,18 @@
     <string name="r_capitulatif_du_rendez_vous">Récapitulatif du rendez-vous</string>
     <string name="confirmer">Confirmer</string>
     <string name="prise_de_rendez_vous">Prise de rendez-vous</string>
+    <string name="error_fill_all">Veuillez remplir tous les champs</string>
+    <string name="register_success">Inscription réussie !</string>
+    <string name="welcome_patient">Bienvenue,</string>
+    <string name="register_title">Inscription</string>
+    <string name="hint_first_name">Prénom</string>
+    <string name="hint_last_name">Nom</string>
+    <string name="hint_phone">Tél</string>
+    <string name="hint_email">Adresse Email</string>
+    <string name="hint_password">Mot de passe</string>
+    <string name="button_register">S\'inscrire</string>
+    <string name="btn_take_rdv">Prendre RDV</string>
+    <string name="btn_my_rdv">Mes RDV</string>
+    <string name="btn_profile">Profil</string>string>
 
 </resources>
