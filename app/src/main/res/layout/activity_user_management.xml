@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f2f2f2">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:text="@string/registered_users"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        style="@style/TitleText"/>
+
+    <!-- User count -->
+    <TextView
+        android:id="@+id/tvUserCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_0_users"
+        android:textSize="14sp"
+        android:textColor="@color/grey_counter_txt"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/field_background"
+        android:fontFamily="sans-serif"/>
+
+    <!-- Search & Filter Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/white"
+        android:padding="12dp"
+        android:elevation="2dp"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:orientation="vertical"
+        android:backgroundTint="@android:color/white"
+        android:gravity="center_vertical"
+        android:clipToOutline="true"
+        android:layout_gravity="center">
+
+        <!-- Search Bar -->
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/search_name_email_or_phone"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@android:drawable/edit_text"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#212121"
+            android:textColorHint="#9E9E9E"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:layout_marginBottom="12dp"/>
+
+
+        <!-- Buttons Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btnPickDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pick_date"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"/>
+
+            <Button
+                android:id="@+id/btnClearFilters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clear"
+                android:backgroundTint="@color/red"
+                android:textColor="@android:color/white"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUsers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:clipToPadding="false"/>
+</LinearLayout>

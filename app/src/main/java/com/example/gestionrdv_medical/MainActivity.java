@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         // 2. Simulation des rôles (Login Statique)
 
         // SCÉNARIO 1 : PATIENT
-        if (email.equals("patient@test.com") && password.equals("1234")) {
+        if (email.equals("pat@test.com") && password.equals("1234")) {
             Toast.makeText(this, "Bienvenue Patient !", Toast.LENGTH_SHORT).show();
           Intent intent = new Intent(MainActivity.this, PatientHomeActivity.class);
           startActivity(intent);
@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
         // SCÉNARIO 2 : MÉDECIN
         else if (email.equals("doc@test.com") && password.equals("1234")) {
             Toast.makeText(this, "Bienvenue Docteur !", Toast.LENGTH_SHORT).show();
-//          Intent intent = new Intent(MainActivity.this, DoctorHomeActivity.class);
-//          startActivity(intent);
+            Intent intent = new Intent(MainActivity.this, DoctorHomeActivity.class);
+            startActivity(intent);
             finish();
         }
 

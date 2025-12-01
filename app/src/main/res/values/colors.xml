@@ -21,4 +21,9 @@
     <color name="colorPrimary">#1E88E5</color>
     <color name="colorPrimaryDark">#1976D2</color>
     <color name="colorAccent">#43A047</color>
+    <!-- Fond / texte -->
+    <color name="grey_counter_txt">#666</color>
+    <color name="grey_counter_bg">#f0f0f0</color>
+    <color name="red">#F44336</color>
+
 </resources>

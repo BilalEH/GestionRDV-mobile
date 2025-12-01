@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Espace Santé"
+        android:text="@string/espace_sant"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -38,12 +38,13 @@
         android:layout_height="50dp"
         android:layout_marginTop="40dp"
         android:background="@android:drawable/edit_text"
-        android:hint="Adresse Email"
+        android:hint="@string/adresse_email"
         android:inputType="textEmailAddress"
         android:paddingStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
+        tools:ignore="RtlSymmetry" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -51,20 +52,21 @@
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:background="@android:drawable/edit_text"
-        android:hint="Mot de passe"
+        android:hint="@string/mot_de_passe"
         android:inputType="textPassword"
         android:paddingStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmail"
+        tools:ignore="RtlSymmetry" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
-        android:backgroundTint="#1E88E5"
-        android:text="Se connecter"
+        android:backgroundTint="@color/primary_blue_dark"
+        android:text="@string/se_connecter"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,8 +77,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Pas encore de compte ? Créer un compte"
-        android:textColor="#1E88E5"
+        android:text="@string/pas_encore_de_compte_cr_er_un_compte"
+        android:textColor="@color/primary_blue_dark"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

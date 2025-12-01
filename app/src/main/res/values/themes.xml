@@ -49,4 +49,32 @@
             <item name="android:textColor">#FFFFFF</item>
             <!-- Add other attributes like textSize, padding, etc. -->
         </style>
-    </resources>
+    <!-- Title TextView style -->
+        <style name="TitleText">
+            <item name="android:textColor">@color/primary_blue_dark</item>
+            <item name="android:textSize">22sp</item>
+            <item name="android:textStyle">bold</item>
+            <item name="android:gravity">center</item>
+        </style>
+
+        <!-- Card Text style -->
+        <style name="CardText">
+            <item name="android:textColor">@color/background_white</item>
+            <item name="android:textSize">18sp</item>
+            <item name="android:textStyle">bold</item>
+            <item name="android:gravity">center</item>
+        </style>
+
+        <!-- ImageView style inside cards -->
+        <style name="CardImage">
+            <item name="android:scaleType">fitXY</item>
+        </style>
+
+        <!-- CardView common style (background color & corner radius) -->
+        <style name="DashboardCard">
+            <item name="cardCornerRadius">12dp</item>
+            <item name="android:clickable">true</item>
+            <item name="android:focusable">true</item>
+            <item name="android:foreground">?attr/selectableItemBackground</item>
+        </style>
+</resources>
