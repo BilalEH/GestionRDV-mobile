@@ -1,59 +1,52 @@
 package com.example.gestionrdv_medical;
 
-
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DoctorHomeActivity extends AppCompatActivity {
 
-    private TextView welcomeText;
-    private ListView patientsListView;
-    private TextView todayDateText;
+    private ImageView btnBack;
+    private Button btnAvailability, btnMyAppointments;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_home);
 
-        // Initialisation des vues
-        welcomeText = findViewById(R.id.welcomeText);
-        patientsListView = findViewById(R.id.patientsListView);
-        todayDateText = findViewById(R.id.todayDateText);
+        // 1. Initialisation
+        btnBack = findViewById(R.id.btnBack);
+        btnAvailability = findViewById(R.id.btnAvailability);
+        btnMyAppointments = findViewById(R.id.btnMyAppointments);
 
-        // Message de bienvenue
-        welcomeText.setText("Bonjour Dr.");
+        // 2. Bouton Retour
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish(); // Revenir au login
+            }
+        });
 
-        // Date du jour
-        todayDateText.setText("Patients du jour: " + java.text.DateFormat.getDateInstance().format(new java.util.Date()));
+        // 3. Vers "Gérer les disponibilités"
+        btnAvailability.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Cette activité existe, on l'ouvre !
+                Intent intent = new Intent(DoctorHomeActivity.this, DoctorAvailabilityActivity.class);
+                startActivity(intent);
+            }
+        });
 
-        // Données simulées des patients
-        String[] patients = {
-                "10:00 - Patient: Dupont Jean - Consultation générale",
-                "11:00 - Patient: Marie Claire - Suivi médical",
-                "14:00 - Patient: Ahmed Mohamed - Consultation urgente",
-                "15:30 - Patient: Sophie Martin - Contrôle annuel",
-                "16:00 - Patient: Robert Bernard - Prise de sang"
-        };
-
-        // Adapter pour la ListView
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_list_item_1,
-                patients
-        );
-
-        patientsListView.setAdapter(adapter);
-
-        // Gestion du clic sur un patient
-        patientsListView.setOnItemClickListener((parent, view, position, id) -> {
-            String selectedPatient = patients[position];
-            Toast.makeText(DoctorHomeActivity.this,
-                    "Patient sélectionné: " + selectedPatient,
-                    Toast.LENGTH_SHORT).show();
+        // 4. Vers "Mes Rendez-vous"
+        btnMyAppointments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(DoctorHomeActivity.this, "Liste des RDV : Bientôt disponible", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 }

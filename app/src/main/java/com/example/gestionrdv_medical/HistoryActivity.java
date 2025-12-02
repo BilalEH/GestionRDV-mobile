@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -36,10 +37,22 @@ public class HistoryActivity extends AppCompatActivity {
 
     private String selectedDate = null; // yyyy-MM-dd
 
+    private ImageView btnBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
+        btnBack = findViewById(R.id.btnBack);
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish(); // Revenir à l'accueil
+            }
+        });
+
+
 
         // Views
         recyclerView = findViewById(R.id.recyclerView);
@@ -48,7 +61,6 @@ public class HistoryActivity extends AppCompatActivity {
         spFilterDate = findViewById(R.id.spFilterDate);
         btnClear = findViewById(R.id.btnClear);
         btnPickDate = findViewById(R.id.btnPickDate);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Lists

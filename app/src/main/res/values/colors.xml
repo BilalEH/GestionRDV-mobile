@@ -4,6 +4,7 @@
     <color name="secondary_blue">#BBDEFB</color>
     <color name="accent_green">#43A047</color>
     <color name="text_dark">#212121</color>
+    <color name="purple_500">#9C27B0</color>
     <!-- Add your existing colors here -->
 
     <!-- Add the missing 'black' color -->

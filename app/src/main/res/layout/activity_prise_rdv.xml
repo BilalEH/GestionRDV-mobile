@@ -1,44 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="30dp">
+    android:background="#F5F5F5">
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/prise_de_rendez_vous"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <DatePicker
-        android:id="@+id/datePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="447dp"
-        android:layout_marginBottom="18dp" />
-
-    <Spinner
-        android:id="@+id/spinnerMotif"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp" />
+        android:layout_height="60dp"
+        android:background="#1E88E5"
+        android:padding="10dp">
 
-    <Spinner
-        android:id="@+id/spinnerCreneau"
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            app:tint="@color/white"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nouveau Rendez-vous"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnConfirmer"
-        style="@style/Widget.App.Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/confirmer" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Choisissez la date"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"/>
 
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:background="@android:color/white"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Motif de consultation"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"/>
+
+            <Spinner
+                android:id="@+id/spMotif"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Créneau Horaire"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"/>
+
+            <Spinner
+                android:id="@+id/spCreneau"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_marginBottom="30dp"/>
+
+            <Button
+                android:id="@+id/btnConfirmRdv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Confirmer le Rendez-vous"
+                android:textSize="18sp"
+                android:backgroundTint="#43A047"/>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

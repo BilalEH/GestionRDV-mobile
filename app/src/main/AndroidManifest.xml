@@ -12,45 +12,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GestionRDV_Medical"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".DoctorAvailabilityActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".DoctorHomeActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".RegisterActivity" android:exported="false" />
+        <activity android:name=".PatientHomeActivity" android:exported="false" />
+        <activity android:name=".PriseRdvActivity" android:exported="false" />
+        <activity android:name=".RdvConfirmationActivity" android:exported="false" />
+        <activity android:name=".HistoryActivity" android:exported="false" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PatientHomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PriseRdvActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RdvConfirmationActivity"
-            android:exported="false" />
+        <activity android:name=".DoctorHomeActivity" android:exported="false" />
+        <activity android:name=".DoctorAvailabilityActivity" android:exported="false" />
+
+        <activity android:name=".AdminDashboardActivity" android:exported="false" />
+        <activity android:name=".UserManagementActivity" android:exported="false" />
+
     </application>
 
 </manifest>

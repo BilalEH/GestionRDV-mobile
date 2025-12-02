@@ -61,5 +61,9 @@
     <string name="_0_users">0 users</string>
     <string name="search_name_email_or_phone">Search name, email or phone</string>
     <string name="pick_date">Pick Date</string>
+    <string name="bienvenue">Bienvenue</string>
+    <string name="prendre_un_rendez_vous">Prendre un Rendez-vous</string>
+    <string name="mon_profil">Mon Profil</string>
+    <string name="vous_recevrez_une_notification_de_rappel_la_veille_du_rendez_vous">Vous recevrez une notification de rappel la veille du rendez-vous.</string>
 
 </resources>

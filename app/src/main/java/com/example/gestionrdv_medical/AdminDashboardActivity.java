@@ -1,40 +1,61 @@
 package com.example.gestionrdv_medical;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-//import com.example.gestionrdv.R;
-
 
 public class AdminDashboardActivity extends AppCompatActivity {
+
+    private ImageView btnBack;
+    private Button btnManageUsers, btnManageDoctors, btnAllRdv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_admin_dashboard);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        // 1. Initialisation des vues
+        btnBack = findViewById(R.id.btnBack);
+        btnManageUsers = findViewById(R.id.btnManageUsers);
+        btnManageDoctors = findViewById(R.id.btnManageDoctors);
+        btnAllRdv = findViewById(R.id.btnAllRdv);
+
+        // 2. Bouton Retour (Revient au Login)
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
         });
 
-        /*
-        MaterialCardView cardHistory = findViewById(R.id.cardHistory);
-        cardHistory.setOnClickListener(v -> startActivity(new Intent(this, HistoryActivity.class)));
+        // 3. Navigation vers "Gérer les Utilisateurs"
+        btnManageUsers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Ce fichier existe déjà dans ton projet, on peut l'ouvrir !
+                Intent intent = new Intent(AdminDashboardActivity.this, UserManagementActivity.class);
+                startActivity(intent);
+            }
+        });
 
-        MaterialCardView cardUsers = findViewById(R.id.cardUsers);
-        cardUsers.setOnClickListener(v -> startActivity(new Intent(this, UserManagementActivity.class)));
+        // 4. Navigation vers "Gérer les Médecins" (Placeholder)
+        btnManageDoctors.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(AdminDashboardActivity.this, "Gestion Médecins : Bientôt disponible", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-        MaterialCardView cardStats = findViewById(R.id.cardStats);
-        cardStats.setOnClickListener(v -> startActivity(new Intent(this, StatsActivity.class)));
-        */
+        // 5. Navigation vers "Tous les RDV" (Placeholder)
+        btnAllRdv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(AdminDashboardActivity.this, "Liste globale des RDV : Bientôt disponible", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
-
-
 }

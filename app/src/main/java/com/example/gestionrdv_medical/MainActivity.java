@@ -69,9 +69,9 @@ public class MainActivity extends AppCompatActivity {
 
         // SCÉNARIO 3 : ADMIN
         else if (email.equals("admin@test.com") && password.equals("1234")) {
-            Toast.makeText(this, "Mode Administrateur", Toast.LENGTH_SHORT).show();
-//          Intent intent = new Intent(MainActivity.this, AdminDashboardActivity.class);
-//          startActivity(intent);
+            Toast.makeText(this, "Bienvenue Administrateur !", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, AdminDashboardActivity.class);
+            startActivity(intent);
             finish();
         }
 

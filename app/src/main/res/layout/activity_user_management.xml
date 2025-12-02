@@ -1,111 +1,122 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#f2f2f2">
+    android:background="#F5F5F5">
 
-    <!-- Title -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:text="@string/registered_users"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:background="@android:color/white"
-        android:elevation="4dp"
-        style="@style/TitleText"/>
+        android:layout_height="60dp"
+        android:background="#1E88E5"
+        android:padding="10dp">
 
-    <!-- User count -->
-    <TextView
-        android:id="@+id/tvUserCount"
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            app:tint="#FFFFFF"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gestion Utilisateurs"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/btnAddUser"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@android:drawable/ic_input_add"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:tint="#FFFFFF"
+            android:clickable="true"
+            android:focusable="true"/>
+    </RelativeLayout>
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/_0_users"
-        android:textSize="14sp"
-        android:textColor="@color/grey_counter_txt"
-        android:gravity="center"
-        android:padding="8dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/field_background"
-        android:fontFamily="sans-serif"/>
+        android:layout_height="match_parent">
 
-    <!-- Search & Filter Section -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/white"
-        android:padding="12dp"
-        android:elevation="2dp"
-        android:clipToPadding="false"
-        android:clipChildren="false"
-        android:orientation="vertical"
-        android:backgroundTint="@android:color/white"
-        android:gravity="center_vertical"
-        android:clipToOutline="true"
-        android:layout_gravity="center">
-
-        <!-- Search Bar -->
-        <EditText
-            android:id="@+id/etSearch"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:hint="@string/search_name_email_or_phone"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:background="@android:drawable/edit_text"
-            android:backgroundTint="#E0E0E0"
-            android:textColor="#212121"
-            android:textColorHint="#9E9E9E"
-            android:imeOptions="actionSearch"
-            android:singleLine="true"
-            android:layout_marginBottom="12dp"/>
-
-
-        <!-- Buttons Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="end">
+            android:orientation="vertical"
+            android:padding="15dp">
 
-            <Button
-                android:id="@+id/btnPickDate"
-                android:layout_width="wrap_content"
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/pick_date"
-                android:backgroundTint="@color/colorPrimary"
-                android:textColor="@android:color/white"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"/>
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ahmed Alami"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rôle : Patient"
+                        android:textColor="#1E88E5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email : ahmed@gmail.com"
+                        android:layout_marginTop="5dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            <Button
-                android:id="@+id/btnClearFilters"
-                android:layout_width="wrap_content"
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/clear"
-                android:backgroundTint="@color/red"
-                android:textColor="@android:color/white"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"/>
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dr. Sarah Bennani"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rôle : Médecin"
+                        android:textColor="#43A047"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email : dr.sarah@cabinet.com"
+                        android:layout_marginTop="5dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
         </LinearLayout>
-    </LinearLayout>
-
-    <!-- RecyclerView -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvUsers"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:clipToPadding="false"/>
+    </ScrollView>
 </LinearLayout>
